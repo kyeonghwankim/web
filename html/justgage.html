@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>justgage</title>	
+	<script type="text/javascript" src='http://code.jquery.com/jquery-latest.js'></script>
+	<script src="..\justgage-1.2.2\raphael-2.1.4.min.js"></script>
+	<script src="..\justgage-1.2.2\justgage.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var g = new JustGage({
+				id: "gauge",
+			    //value: getRandomInt(350, 980),
+			    value: 40.44,
+			    min: 0,
+			    max: 100,
+			    title: "Lone Ranger",
+			    label: "miles traveled",
+			    noGradient:false
+			});
+		});
+	</script>
+	<style type="text/css">
+	.sample2{width:30px;height:100px;margin:10px 0;background:linear-gradient(red,yellow);}
+	.sample1{background:linear-gradient(red,yellow);}
+	</style>
+</head>
+<body>
+	<div id="gauge" class="sample1"></div>
+	<div class="sample2"></div>
+</body>
+</html>

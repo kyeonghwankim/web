@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>getParent</title>	
+	<script type="text/javascript" src='http://code.jquery.com/jquery-latest.js'></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('[id=\'read parent\']').on('click', function(){
+				$('#depth1').find('li a').each(function(){
+					console.log("[" + $(this).length + "]" + $(this).text());
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="depth1">
+		<ul id="menu">
+		    <li><a href="#">Home</a></li>
+		    <li>
+		        <a href="#">Categories</a>
+		        <ul>
+		            <li><a href="#">CSS</a></li>
+		            <li><a href="#">Graphic design</a></li>
+		            <li><a href="#">Development tools</a></li>
+		            <li><a href="#">Web design</a></li>
+		            <li id="read parent"><a href="#">read parent</a></li>
+		        </ul>
+		    </li>
+		    <li><a href="#">Work</a></li>
+		    <li><a href="#">About</a></li>
+		    <li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+</body>
+</html>
